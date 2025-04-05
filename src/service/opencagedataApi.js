@@ -9,5 +9,6 @@ export const getUserInfo = async ({ latitude, longitude }) => {
       language: 'en',
     },
   });
-  return data;
+  //* аби отримати міжнародний код країни в якій знаходиться користувач iso_code
+  return data.results[0].annotations.currency.iso_code;
 };
